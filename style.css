@@ -1,0 +1,125 @@
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  .time-select {
+    width: 100%;
+  }
+  .player-container {
+    background-color: #ff895d;
+    width: 100%;
+    font-size: 18px;
+  }
+  .play {
+    height: 60px;
+    width: 60px;
+  }
+  video {
+    display: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+.time-select,
+.sound-picker,
+.player-container {
+  height: 80%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.player-container {
+  position: relative;
+}
+.player-container svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+.time-display {
+  position: absolute;
+  bottom: 10%;
+  color: white;
+  font-size: 50px;
+}
+video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -10;
+}
+.time-select button,
+.sound-picker button {
+  color: #d5eeff;
+  width: 30%;
+  height: 10%;
+  background: none;
+  border: 2px solid #005689;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.time-select button {
+  background-color: #007cb9;
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 90%;
+  box-shadow: 1px 1px 1px #005689;
+}
+.time-select button:hover {
+  background-color: #005689;
+  opacity: 90%;
+  border: 2px solid #005689;
+}
+.sound-picker button {
+  border: none;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 30px;
+  box-shadow: 1px;
+  box-shadow: 1px 1px 1px #005689;
+}
+.sound-picker button:nth-child(1) {
+  background: #ff895d;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #f5d547;
+}
+.sound-picker button:nth-child(1):hover {
+  background: #f5d547;
+  box-shadow: 1px 1px 1px #ff895d;
+}
+.sound-picker button:nth-child(2) {
+  background: #007cb9;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #005689;
+}
+.sound-picker button:nth-child(2):hover {
+  background: #005689;
+  box-shadow: 1px 1px 1px #005689;
+}
+.sound-picker button img {
+  height: 100%;
+  opacity: 90%;
+}
+p {
+  color: white;
+  margin-left: 180px;
+  margin-bottom: 180px;
+}
